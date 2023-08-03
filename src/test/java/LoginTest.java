@@ -1,13 +1,13 @@
 import org.testng.annotations.Test;
-import po.SignInFlow;
+import po.LogIn;
 
 import static org.testng.AssertJUnit.assertEquals;
 
 public class LoginTest extends BaseTest{
-    SignInFlow signIn = new SignInFlow();
+    LogIn signIn = new LogIn();
 
     @Test
-    void SignInWikiPage() {
+    void checkUserNameAfterLogin() {
         signIn.clickOnLoginButton();
         signIn.inputUserName("МихоАвто");
         signIn.inputPassword("qwer1608QWER");

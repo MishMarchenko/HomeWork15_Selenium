@@ -3,7 +3,7 @@ package po;
 import Base.BaseMethod;
 import org.openqa.selenium.By;
 
-public class SignInFlow extends BaseMethod {
+public class LogIn extends BaseMethod {
     private final By loginButton = By.xpath("//li[@id='pt-login']/a/span");
     private final By userNameInput = By.xpath("//input[@id='wpName1']");
     private final By passwordInput = By.xpath("//input[@id='wpPassword1']");
