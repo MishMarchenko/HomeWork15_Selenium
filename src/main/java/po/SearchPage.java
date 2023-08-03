@@ -6,7 +6,7 @@ import org.openqa.selenium.By;
 public class SearchPage extends BaseMethod {
     private final By search = By.xpath("//input[@name='search']");
     private final By ubisoft = By.xpath("//div[@class='mw-search-result-heading']/a/span");
-    private final By result = By.xpath("//h1[@id='firstHeading']");
+    private final By title = By.xpath("//h1[@id='firstHeading']");
 
     public void inputText(String text){
         send(search, text);
@@ -18,6 +18,6 @@ public class SearchPage extends BaseMethod {
         click(ubisoft);
     }
     public String checkTitle(){
-        return getTextFromElement(result);
+        return getTextFromElement(title);
     }
 }
