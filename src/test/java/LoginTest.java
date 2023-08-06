@@ -2,8 +2,6 @@ import org.testng.annotations.Test;
 import po.ArticlePage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-import static org.testng.AssertJUnit.assertEquals;
-
 public class LoginTest extends BaseTest{
     @Test(groups = {"Smoke"})
     void checkUserNameAfterLogin() {
