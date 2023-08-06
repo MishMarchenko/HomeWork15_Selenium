@@ -5,7 +5,7 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 import static org.testng.AssertJUnit.assertEquals;
 
 public class LoginTest extends BaseTest{
-    @Test
+    @Test(groups = {"Smoke"})
     void checkUserNameAfterLogin() {
         new ArticlePage()
         .clickOnLoginButton()

@@ -2,10 +2,20 @@
 
 <suite name="Simple">
     <test name="Search/Login">
+        <groups>
+            <define name="All"/>
+            <define name="Smoke"/>
+            <define name="Regression"/>
+            <run>
+                <include name="All"/>
+                <include name="Smoke"/>
+                <include name="Regression"/>
+            </run>
+        </groups>
         <classes>
-                <class name="SearchTest"/>
-                <class name="LoginTest"/>
-                <class name="LoginTestValidation"/>
+            <class name="SearchTest"/>
+            <class name="LoginTest"/>
+            <class name="ValidationTest"/>
         </classes>
     </test>
 </suite>
