@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+
+<suite name="Simple">
+    <test name="Search/Login">
+        <classes>
+                <class name="SearchTest"/>
+                <class name="LoginTest"/>
+                <class name="LoginTestValidation"/>
+        </classes>
+    </test>
+</suite>

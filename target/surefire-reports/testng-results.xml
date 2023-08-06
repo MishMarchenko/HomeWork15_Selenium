@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2023-08-06T15:22:15Z" name="Surefire suite" finished-at="2023-08-06T15:22:26Z" duration-ms="11670">
+    <groups>
+    </groups>
+    <test started-at="2023-08-06T15:22:15Z" name="Surefire test" finished-at="2023-08-06T15:22:26Z" duration-ms="11670">
+      <class name="SearchTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:SearchTest@47eaca72]" started-at="2023-08-06T15:22:23Z" name="setUp" finished-at="2023-08-06T15:22:24Z" duration-ms="1298" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="shouldBeVisibleUbisoftTitle()[pri:0, instance:SearchTest@47eaca72]" started-at="2023-08-06T15:22:24Z" name="shouldBeVisibleUbisoftTitle" finished-at="2023-08-06T15:22:26Z" duration-ms="2224" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- shouldBeVisibleUbisoftTitle -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:SearchTest@47eaca72]" started-at="2023-08-06T15:22:26Z" name="tearDown" finished-at="2023-08-06T15:22:26Z" duration-ms="88" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- SearchTest -->
+      <class name="LoginTest">
+        <test-method is-config="true" signature="setUp()[pri:0, instance:LoginTest@1aafa419]" started-at="2023-08-06T15:22:15Z" name="setUp" finished-at="2023-08-06T15:22:17Z" duration-ms="2207" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method signature="checkUserNameAfterLogin()[pri:0, instance:LoginTest@1aafa419]" started-at="2023-08-06T15:22:17Z" name="checkUserNameAfterLogin" finished-at="2023-08-06T15:22:23Z" duration-ms="5742" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkUserNameAfterLogin -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:LoginTest@1aafa419]" started-at="2023-08-06T15:22:23Z" name="tearDown" finished-at="2023-08-06T15:22:23Z" duration-ms="89" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- LoginTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>
