@@ -1,17 +1,17 @@
 import org.testng.annotations.Test;
-import po.LogIn;
+import po.ArticlePage;
 
-import static org.testng.AssertJUnit.assertEquals;
-
+import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class LoginTest extends BaseTest{
-    LogIn signIn = new LogIn();
-
-    @Test
+    @Test(groups = {"Smoke"})
     void checkUserNameAfterLogin() {
-        signIn.clickOnLoginButton();
-        signIn.inputUserName("МихоАвто");
-        signIn.inputPassword("qwer1608QWER");
-        signIn.enterCredentials();
-        assertEquals("МихоАвто", signIn.checkUserName());
+        new ArticlePage()
+        .clickOnLoginButton()
+        .inputUserName("МихоАвто")
+        .inputPassword("qwer1608QWER")
+        .enterCredentials();
+        assertThat(new ArticlePage().checkUserName())
+                .as("The result of test is appeared")
+                .isEqualTo("МихоАвто");
     }
 }

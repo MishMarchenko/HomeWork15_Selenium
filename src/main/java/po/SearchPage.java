@@ -7,15 +7,17 @@ public class SearchPage extends BaseMethod {
     private final By search = By.xpath("//input[@name='search']");
     private final By ubisoft = By.xpath("//div[@class='mw-search-result-heading']/a/span");
     private final By title = By.xpath("//h1[@id='firstHeading']");
-
-    public void inputText(String text){
+    public SearchPage inputText(String text){
         send(search, text);
+        return this;
     }
-    public void enterSearch(){
+    public SearchPage enterSearch(){
         clickEnter(search);
+        return this;
     }
-    public void clickOnUbisoftLink(){
+    public SearchPage clickOnUbisoftLink(){
         click(ubisoft);
+        return this;
     }
     public String checkTitle(){
         return getTextFromElement(title);
