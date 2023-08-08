@@ -23,4 +23,5 @@ public class BaseMethod {
     protected String getTextFromElement(By locator){
         return getWait().until(d -> d.findElement(locator)).getText();
     }
+
 }
