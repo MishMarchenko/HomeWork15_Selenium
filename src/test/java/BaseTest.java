@@ -9,8 +9,8 @@ public class BaseTest {
     @BeforeMethod(groups = {"All", "Smoke", "Regression"})
     public void setUp(){
         driver = getDriver();
-        driver.get("https://ru.wikipedia.org/");
-        driver.manage().window().maximize();
+//        driver.get("https://ru.wikipedia.org/");
+//        driver.manage().window().maximize();
     }
     @AfterMethod(groups = {"All", "Smoke", "Regression"})
     public void tearDown(){

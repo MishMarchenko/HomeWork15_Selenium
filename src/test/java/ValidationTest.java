@@ -5,8 +5,11 @@ import po.ArticlePage;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class ValidationTest extends BaseTest{
+
     @Test(groups = {"Regression"}, dataProvider = "UserNameValidationTest")
     void checkUserNameValidation(String userName) {
+        driver.get("https://ru.wikipedia.org/");
+        driver.manage().window().maximize();
         new ArticlePage()
                 .clickOnLoginButton()
                 .inputUserName(userName)
@@ -18,6 +21,8 @@ public class ValidationTest extends BaseTest{
     }
     @Test(groups = {"Regression"}, dataProvider = "PasswordValidationTest")
     void checkPasswordValidation(String password) {
+        driver.get("https://ru.wikipedia.org/");
+        driver.manage().window().maximize();
         new ArticlePage()
                 .clickOnLoginButton()
                 .inputUserName("МихоАвто")
