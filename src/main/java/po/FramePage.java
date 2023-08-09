@@ -8,8 +8,6 @@ import static config.WebDriverInit.getDriver;
 
 public class FramePage extends BaseMethod {
     private final By textFromChildFrame = By.xpath("/html/body/p");
-    private final By parentFrameElement = By.xpath("//iframe[@id='frame1']");
-
     public String getTextFromFrame(){
         return getTextFromElement(textFromChildFrame);
     }
