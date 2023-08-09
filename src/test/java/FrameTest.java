@@ -10,13 +10,9 @@ public class FrameTest extends BaseTest{
     void getTextFromChildFrame(){
         driver.get("https://demoqa.com/nestedframes");
         driver.manage().window().maximize();
-
-        WebElement parentFrame = driver.findElement(By.xpath("//iframe[@id='frame1']"));
-        driver.switchTo().frame(parentFrame);
-
-        WebElement childFrame = driver.findElement(By.xpath("//iframe[@srcdoc='<p>Child Iframe</p>']"));
-        driver.switchTo().frame(childFrame);
-
+        new FramePage()
+                .switchToParentFrame()
+                .switchToChildFrame();
         assertThat(new FramePage().getTextFromFrame())
                 .as("Selenium located not into frame")
                 .isEqualTo("Child Iframe");

@@ -2,6 +2,7 @@ package Base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,5 +24,4 @@ public class BaseMethod {
     protected String getTextFromElement(By locator){
         return getWait().until(d -> d.findElement(locator)).getText();
     }
-
 }

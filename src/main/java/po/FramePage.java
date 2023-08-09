@@ -8,16 +8,20 @@ import static config.WebDriverInit.getDriver;
 
 public class FramePage extends BaseMethod {
     private final By textFromChildFrame = By.xpath("/html/body/p");
-//    WebElement parentFrameElement = getDriver().findElement(By.xpath("//iframe[@id='frame1']"));
-//    WebElement childIframeElement = getDriver().findElement(By.xpath("//iframe[@srcdoc='<p>Child Iframe</p>']"));
+    private final By parentFrameElement = By.xpath("//iframe[@id='frame1']");
 
     public String getTextFromFrame(){
         return getTextFromElement(textFromChildFrame);
     }
-//    public void switchToFrame(){
-//        WebElement parentFrameElement = getDriver().findElement(By.xpath("//iframe[@id='frame1']"));
-//        getWait().until(d->d.switchTo().frame(parentFrameElement));
-//
-//    }
+    public FramePage switchToParentFrame(){
+        WebElement parentFrameElement = getDriver().findElement(By.xpath("//iframe[@id='frame1']"));
+        getWait().until(d->d.switchTo().frame(parentFrameElement));
+        return this;
+    }
+    public FramePage switchToChildFrame(){
+        WebElement childFrameElement = getDriver().findElement(By.xpath("//iframe[@srcdoc='<p>Child Iframe</p>']"));
+        getWait().until(d->d.switchTo().frame(childFrameElement));
+        return this;
+    }
 
 }
