@@ -5,6 +5,8 @@ import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class LoginTest extends BaseTest{
     @Test(groups = {"Smoke"})
     void checkUserNameAfterLogin() {
+        driver.get("https://ru.wikipedia.org/");
+        driver.manage().window().maximize();
         new ArticlePage()
         .clickOnLoginButton()
         .inputUserName("МихоАвто")
