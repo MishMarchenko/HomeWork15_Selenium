@@ -1,5 +1,7 @@
+package selenium.listeners;
+
 import org.testng.annotations.Test;
-import po.SearchPage;
+import selenium.po.po.SearchPage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 public class SearchTest extends BaseTest {

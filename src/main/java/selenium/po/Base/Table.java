@@ -1,4 +1,4 @@
-package Base;
+package selenium.po.Base;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;

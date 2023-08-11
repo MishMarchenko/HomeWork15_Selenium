@@ -1,10 +1,10 @@
-package po;
+package selenium.po.po;
 
-import Base.BaseMethod;
+import selenium.po.Base.BaseMethod;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
-import static config.WebDriverInit.getDriver;
+import static selenium.po.config.WebDriverInit.getDriver;
 
 public class FramePage extends BaseMethod {
     private final By textFromChildFrame = By.xpath("/html/body/p");

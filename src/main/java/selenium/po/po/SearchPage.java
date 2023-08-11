@@ -1,6 +1,6 @@
-package po;
+package selenium.po.po;
 
-import Base.BaseMethod;
+import selenium.po.Base.BaseMethod;
 import org.openqa.selenium.By;
 
 public class SearchPage extends BaseMethod {
