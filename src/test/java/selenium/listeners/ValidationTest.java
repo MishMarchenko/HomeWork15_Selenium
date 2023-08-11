@@ -2,7 +2,6 @@ package selenium.listeners;
 
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import selenium.listeners.BaseTest;
 import selenium.po.po.ArticlePage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
