@@ -15,8 +15,16 @@
         <selenide.version>6.15.0</selenide.version>
         <testng.version>6.14.3</testng.version>
         <assertj.version>3.11.1</assertj.version>
+        <rest-assured.version>5.3.1</rest-assured.version>
     </properties>
     <dependencies>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>${rest-assured.version}</version>
+            <scope>test</scope>
+        </dependency>
+
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -43,6 +51,12 @@
             <groupId>com.codeborne</groupId>
             <artifactId>selenide</artifactId>
             <version>${selenide.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>rest-assured</artifactId>
+            <version>5.3.1</version>
+            <scope>compile</scope>
         </dependency>
 
     </dependencies>
