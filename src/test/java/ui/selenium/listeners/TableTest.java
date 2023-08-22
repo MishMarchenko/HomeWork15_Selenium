@@ -1,9 +1,11 @@
+package ui.selenium.listeners;
+
 import org.testng.annotations.Test;
-import po.TablePage;
+import ui.selenium.po.TablePage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class TableTest extends BaseTest{
+public class TableTest extends BaseTest {
     @Test
     public void getTextFromTable(){
         driver.get("https://demoqa.com/webtables");

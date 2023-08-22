@@ -13,9 +13,9 @@
             </run>
         </groups>
         <classes>
-            <class name="SearchTest"/>
-            <class name="LoginTest"/>
-            <class name="ValidationTest"/>
+            <class name="selenium.listeners.SearchTest"/>
+            <class name="selenium.listeners.LoginTest"/>
+            <class name="selenium.listeners.ValidationTest"/>
         </classes>
     </test>
 </suite>

@@ -1,8 +1,10 @@
+package ui.selenium.listeners;
+
 import org.testng.annotations.Test;
-import po.ArticlePage;
+import ui.selenium.po.ArticlePage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
-public class LoginTest extends BaseTest{
+public class LoginTest extends BaseTest {
     @Test(groups = {"Smoke"})
     void checkUserNameAfterLogin() {
         driver.get("https://ru.wikipedia.org/");

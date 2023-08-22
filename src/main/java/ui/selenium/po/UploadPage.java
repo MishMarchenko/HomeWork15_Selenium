@@ -1,6 +1,6 @@
-package po;
+package ui.selenium.po;
 
-import Base.BaseMethod;
+import ui.selenium.Base.BaseMethod;
 import org.openqa.selenium.By;
 
 public class UploadPage extends BaseMethod {

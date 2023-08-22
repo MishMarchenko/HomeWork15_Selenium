@@ -1,10 +1,12 @@
+package ui.selenium.listeners;
+
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
-import po.ArticlePage;
+import ui.selenium.po.ArticlePage;
 
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
-public class ValidationTest extends BaseTest{
+public class ValidationTest extends BaseTest {
 
     @Test(groups = {"Regression"}, dataProvider = "UserNameValidationTest")
     void checkUserNameValidation(String userName) {

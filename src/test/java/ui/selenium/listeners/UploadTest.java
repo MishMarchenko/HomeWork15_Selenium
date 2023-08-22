@@ -1,8 +1,10 @@
+package ui.selenium.listeners;
+
 import org.testng.annotations.Test;
-import po.UploadPage;
+import ui.selenium.po.UploadPage;
 
 
-public class UploadTest extends BaseTest{
+public class UploadTest extends BaseTest {
     @Test
     public void uploadFileTest(){
         driver.get("https://demoqa.com/upload-download");
