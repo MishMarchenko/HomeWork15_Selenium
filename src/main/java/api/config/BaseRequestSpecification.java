@@ -12,7 +12,7 @@ public class BaseRequestSpecification {
     public RequestSpecification request(){
         return new RequestSpecBuilder()
                 .setBaseUri(url)
-                .setBasePath("v2/")
+                .setBasePath("v2")
                 .addHeader(CONTENT_TYPE, APPLICATION_JSON)
                 .build();
     }
