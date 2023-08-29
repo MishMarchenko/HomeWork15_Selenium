@@ -22,10 +22,17 @@ public class Request {
                 .then()
                 .spec(response);
     }
-    public Response get(RequestSpecification request, String endpoint){
+    public Response get(RequestSpecification request, String endpoint, String username){
         return given()
                 .spec(request)
-                .get(endpoint);
+                .get(endpoint + username);
+    }
+    public ValidatableResponse get(RequestSpecification request, String endpoint, String username, ResponseSpecification response){
+        return given()
+                .spec(request)
+                .get(endpoint + username)
+                .then()
+                .spec(response);
     }
     public Response put(){
         return null;
