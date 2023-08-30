@@ -16,6 +16,7 @@
         <testng.version>6.14.3</testng.version>
         <assertj.version>3.11.1</assertj.version>
         <rest-assured.version>5.3.1</rest-assured.version>
+        <json.shema.validator>3.3.0</json.shema.validator>
     </properties>
     <dependencies>
         <dependency>
@@ -24,7 +25,12 @@
             <version>${rest-assured.version}</version>
             <scope>test</scope>
         </dependency>
-
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>3.3.0</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>org.seleniumhq.selenium</groupId>
             <artifactId>selenium-java</artifactId>
@@ -62,6 +68,12 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>RELEASE</version>
+            <scope>compile</scope>
+        </dependency>
+        <dependency>
+            <groupId>io.rest-assured</groupId>
+            <artifactId>json-schema-validator</artifactId>
+            <version>3.3.0</version>
             <scope>compile</scope>
         </dependency>
 

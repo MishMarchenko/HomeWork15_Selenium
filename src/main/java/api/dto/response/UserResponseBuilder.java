@@ -9,7 +9,7 @@ import lombok.AllArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class UserCreateResponseBuilder {
+public class UserResponseBuilder {
     Integer code;
     String type;
     String message;

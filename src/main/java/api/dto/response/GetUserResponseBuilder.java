@@ -12,5 +12,6 @@ import lombok.AllArgsConstructor;
 public class GetUserResponseBuilder {
     Long id;
     String username;
+    String lastname;
     Integer userStatus;
 }
