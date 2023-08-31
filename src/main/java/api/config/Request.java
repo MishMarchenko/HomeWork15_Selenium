@@ -63,7 +63,30 @@ public class Request {
                 .then()
                 .spec(response);
     }
-    public Response delete(){
-        return null;
+    public ValidatableResponse put(RequestSpecification request, String body, String endpoint, String param,
+                                   ResponseSpecification response, String path){
+        return given()
+                .spec(request)
+                .body(body)
+                .put(endpoint + param)
+                .then()
+                .spec(response)
+                .body(matchesJsonSchemaInClasspath(path));
+    }
+    public ValidatableResponse delete(RequestSpecification request, String endpoint, String param, ResponseSpecification response){
+        return given()
+                .spec(request)
+                .delete(endpoint + param)
+                .then()
+                .spec(response);
+    }
+    public ValidatableResponse getNotFound(RequestSpecification request, String endpoint, String username, ResponseSpecification response,
+                                   String path){
+        return given()
+                .spec(request)
+                .get(endpoint + username)
+                .then()
+                .spec(response)
+                .body(matchesJsonSchemaInClasspath(path));
     }
 }

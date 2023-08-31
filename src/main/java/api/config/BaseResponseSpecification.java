@@ -10,4 +10,9 @@ public class BaseResponseSpecification {
                 .expectStatusCode(HttpStatus.SC_OK)
                 .build();
     }
+    public ResponseSpecification NOT_FOUND(){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_NOT_FOUND)
+                .build();
+    }
 }

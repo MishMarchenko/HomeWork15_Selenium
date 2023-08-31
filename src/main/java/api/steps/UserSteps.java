@@ -5,8 +5,7 @@ import api.config.BaseRequestSpecification;
 import api.config.BaseResponseSpecification;
 import api.config.Request;
 import api.dto.request.UserBuilder;
-import api.dto.response.GetUserResponseBuilder;
-import api.dto.response.UserResponseBuilder;
+import api.dto.response.*;
 import api.endpoints.Endpoints;
 import api.endpoints.Schemas;
 import api.utils.Utils;
@@ -19,14 +18,14 @@ public class UserSteps extends Request {
     BaseRequestSpecification baseRequest = new BaseRequestSpecification();
     BaseResponseSpecification baseResponse = new BaseResponseSpecification();
 
-    public UserResponseBuilder createUser(UserBuilder user){
+    public CreateUserResponseBuilder createUser(UserBuilder user){
         var response = post(baseRequest.request(),toJson(user), Endpoints.CREATE_USER.getValue(), baseResponse.OK(),
                 Schemas.CREATE_USER_SCHEMA.getValue())
                 .extract()
                 .body()
                 .asString();
 
-        return Utils.fromJson(response, UserResponseBuilder.class);
+        return Utils.fromJson(response, CreateUserResponseBuilder.class);
     }
     public Response getUser(UserBuilder user, String username){
         return get(baseRequest.request(), Endpoints.USER_WITH_PARAM.getValue(), username);
@@ -39,12 +38,35 @@ public class UserSteps extends Request {
                 .asString();
         return Utils.fromJson(response, GetUserResponseBuilder.class);
     }
-    public UserResponseBuilder changeUser(UserBuilder user){
+    public ChangeUserResponseBuilder changeUser(UserBuilder user){
         var response = put(baseRequest.request(), toJson(user), Endpoints.USER_WITH_PARAM.getValue(), user.getUsername(),
                 baseResponse.OK())
                 .extract()
                 .body()
                 .asString();
-        return Utils.fromJson(response, UserResponseBuilder.class);
+        return Utils.fromJson(response, ChangeUserResponseBuilder.class);
+    }
+    public ChangeUserResponseBuilder changeUserWithSchema(UserBuilder user){
+        var response = put(baseRequest.request(), toJson(user), Endpoints.USER_WITH_PARAM.getValue(), user.getUsername(),
+                baseResponse.OK(), Schemas.CHANGE_USER_SCHEMA.getValue())
+                .extract()
+                .body()
+                .asString();
+        return Utils.fromJson(response, ChangeUserResponseBuilder.class);
+    }
+    public DeleteUserResponseBuilder deleteUser(String username){
+        var response = delete(baseRequest.request(), Endpoints.USER_WITH_PARAM.getValue(), username, baseResponse.OK())
+                .extract()
+                .body()
+                .asString();
+        return Utils.fromJson(response, DeleteUserResponseBuilder.class);
+    }
+    public GetNotFoundUserResponseBuilder getNotFoundUser(String username){
+        var response = getNotFound(baseRequest.request(), Endpoints.USER_WITH_PARAM.getValue(), username, baseResponse.NOT_FOUND(),
+                Schemas.GET_DELETED_USER_SCHEMA.getValue())
+                .extract()
+                .body()
+                .asString();
+        return Utils.fromJson(response, GetNotFoundUserResponseBuilder.class);
     }
 }
