@@ -11,7 +11,7 @@ import lombok.AllArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Book {
+public class BookResponseBuilder {
     public String isbn;
     public String title;
     public String subTitle;

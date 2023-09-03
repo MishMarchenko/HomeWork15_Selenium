@@ -11,8 +11,8 @@ import lombok.AllArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class Root {
+public class GetUserWithBookResponseBuilder {
     public String userId;
     public String username;
-    public ArrayList<Book> books;
+    public ArrayList<BookResponseBuilder> books;
 }
