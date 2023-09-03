@@ -21,6 +21,7 @@ public class Request {
                 .body(body)
                 .post(endpoint)
                 .then()
+                .log().all()
                 .spec(response);
     }
     public ValidatableResponse post(RequestSpecification request, String body, String endpoint, ResponseSpecification response,
@@ -38,11 +39,12 @@ public class Request {
                 .spec(request)
                 .get(endpoint + username);
     }
-    public ValidatableResponse get(RequestSpecification request, String endpoint, String username, ResponseSpecification response){
+    public ValidatableResponse get(RequestSpecification request, String endpoint, String param, ResponseSpecification response){
         return given()
                 .spec(request)
-                .get(endpoint + username)
+                .get(endpoint + param)
                 .then()
+                .log().all()
                 .spec(response);
     }
     public ValidatableResponse get(RequestSpecification request, String endpoint, String username, ResponseSpecification response,
