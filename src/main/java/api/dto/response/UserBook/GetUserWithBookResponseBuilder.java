@@ -1,6 +1,6 @@
 package api.dto.response.UserBook;
 
-import java.util.ArrayList;
+import java.util.List;
 
 import lombok.Builder;
 import lombok.Data;
@@ -14,5 +14,5 @@ import lombok.AllArgsConstructor;
 public class GetUserWithBookResponseBuilder {
     public String userId;
     public String username;
-    public ArrayList<BookResponseBuilder> books;
+    public List<BookResponseBuilder> books;
 }

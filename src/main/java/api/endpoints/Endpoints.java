@@ -5,7 +5,8 @@ public enum Endpoints {
     USER_WITH_PARAM("/user/"),
     GET_TOKEN("/GenerateToken"),
     USER("/User/"),
-    BOOK("/Books");
+    BOOK("/Books"),
+    DELETE_BOOK("Books?UserId=");
     private final String endpoint;
 
     Endpoints(String endpoint) {

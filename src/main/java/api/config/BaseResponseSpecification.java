@@ -20,4 +20,9 @@ public class BaseResponseSpecification {
                 .expectStatusCode(HttpStatus.SC_CREATED)
                 .build();
     }
+    public ResponseSpecification BOOK_DELETED_SUCCESS(){
+        return new ResponseSpecBuilder()
+                .expectStatusCode(HttpStatus.SC_NO_CONTENT)
+                .build();
+    }
 }
