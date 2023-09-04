@@ -1,4 +1,4 @@
-package api.dto.request.UserBook;
+package api.dto.request.UserBookBuilders;
 
 import java.util.List;
 

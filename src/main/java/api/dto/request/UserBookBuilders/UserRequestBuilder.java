@@ -1,4 +1,4 @@
-package api.dto.request.UserBook;
+package api.dto.request.UserBookBuilders;
 
 import lombok.Builder;
 import lombok.Data;

@@ -3,7 +3,7 @@ package api.config;
 import static api.utils.Utils.getProperty;
 import static api.utils.Utils.toJson;
 
-import api.dto.request.UserBook.UserRequestBuilder;
+import api.dto.request.UserBookBuilders.UserRequestBuilder;
 import api.endpoints.Endpoints;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
