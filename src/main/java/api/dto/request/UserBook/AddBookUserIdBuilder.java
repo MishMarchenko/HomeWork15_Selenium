@@ -14,5 +14,5 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class AddBookUserIdBuilder {
     public String userId;
-    public List<api.dto.request.UserBook.CollectionOfIsbn> CollectionOfIsbn;
+    public List<CollectionOfIsbn> CollectionOfIsbn;
 }
