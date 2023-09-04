@@ -1,4 +1,4 @@
-package api.dto.response;
+package api.dto.request.UserBook;
 
 import lombok.Builder;
 import lombok.Data;
@@ -9,6 +9,7 @@ import lombok.AllArgsConstructor;
 @Data
 @NoArgsConstructor
 @AllArgsConstructor
-public class BookIsbnResponseBuilder {
-    public String isbn;
+public class UserRequestBuilder {
+    String userName;
+    String password;
 }

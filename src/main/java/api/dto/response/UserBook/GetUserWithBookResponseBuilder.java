@@ -1,4 +1,4 @@
-package api.dto.response;
+package api.dto.response.UserBook;
 
 import java.util.ArrayList;
 

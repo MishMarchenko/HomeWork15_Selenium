@@ -3,11 +3,14 @@ package api.steps;
 import api.config.BaseRequestSpecification;
 import api.config.BaseResponseSpecification;
 import api.config.Request;
-import api.dto.request.AddBookUserIdBuilder;
-import api.dto.response.GetUserWithBookResponseBuilder;
-import api.dto.response.UsersBooksResponseBuilder;
+import api.dto.request.UserBook.AddBookUserIdBuilder;
+import api.dto.request.UserBook.CollectionOfIsbn;
+import api.dto.response.UserBook.BookIsbnResponseBuilder;
+import api.dto.response.UserBook.GetUserWithBookResponseBuilder;
 import api.endpoints.Endpoints;
 import api.utils.Utils;
+
+import java.util.List;
 
 import static api.utils.Utils.fromJson;
 import static api.utils.Utils.toJson;
@@ -17,12 +20,14 @@ public class UserBookStoreSteps extends Request {
     BaseResponseSpecification baseResponse = new BaseResponseSpecification();
 
 
-    public UsersBooksResponseBuilder addBook(AddBookUserIdBuilder book){
-        var response = post(baseRequest.requestBook(), toJson(book), Endpoints.BOOK.getValue(), baseResponse.BOOK_ADDED_SUCCESS())
+    public BookIsbnResponseBuilder addBook(AddBookUserIdBuilder book){
+        var response = post(baseRequest.requestBookWithToken(), toJson(new AddBookUserIdBuilder(book.userId,
+                        List.of(new CollectionOfIsbn("9781449331818")))),
+                Endpoints.BOOK.getValue(), baseResponse.BOOK_ADDED_SUCCESS())
                 .extract()
                 .body()
                 .asString();
-        return Utils.fromJson(response, UsersBooksResponseBuilder.class);
+        return Utils.fromJson(response, BookIsbnResponseBuilder.class);
     }
 
     public GetUserWithBookResponseBuilder getUser(){

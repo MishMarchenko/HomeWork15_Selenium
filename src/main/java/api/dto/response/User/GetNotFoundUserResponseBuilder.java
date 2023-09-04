@@ -1,4 +1,4 @@
-package api.dto.response;
+package api.dto.response.User;
 
 import lombok.Builder;
 import lombok.Data;

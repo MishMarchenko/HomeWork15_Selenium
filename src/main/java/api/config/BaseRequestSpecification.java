@@ -3,7 +3,7 @@ package api.config;
 import static api.utils.Utils.getProperty;
 import static api.utils.Utils.toJson;
 
-import api.dto.request.UserRequestBuilder;
+import api.dto.request.UserBook.UserRequestBuilder;
 import api.endpoints.Endpoints;
 import io.restassured.builder.RequestSpecBuilder;
 import io.restassured.specification.RequestSpecification;
@@ -43,11 +43,12 @@ public class BaseRequestSpecification {
                 .addHeader("Authorization", "Bearer " + getToken())
                 .build();
     }
-    public RequestSpecification requestBook(){
+    public RequestSpecification requestBookWithToken(){
         return new RequestSpecBuilder()
                 .setBaseUri(url_book)
                 .setBasePath("v1")
                 .addHeader(CONTENT_TYPE, APPLICATION_JSON)
+                .addHeader("Authorization", "Bearer " + getToken())
                 .build();
     }
 }

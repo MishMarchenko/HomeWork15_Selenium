@@ -1,6 +1,7 @@
-package api.dto.request;
+package api.dto.request.UserBook;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import lombok.Builder;
 import lombok.Data;
@@ -13,5 +14,5 @@ import lombok.AllArgsConstructor;
 @AllArgsConstructor
 public class AddBookUserIdBuilder {
     public String userId;
-    public ArrayList<AddBookIsbnBuilder> AddBookIsbnBuilder;
+    public List<api.dto.request.UserBook.CollectionOfIsbn> CollectionOfIsbn;
 }
