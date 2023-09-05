@@ -38,10 +38,10 @@ public class Request {
                 .spec(request)
                 .get(endpoint + username);
     }
-    public ValidatableResponse get(RequestSpecification request, String endpoint, String username, ResponseSpecification response){
+    public ValidatableResponse get(RequestSpecification request, String endpoint, String param, ResponseSpecification response){
         return given()
                 .spec(request)
-                .get(endpoint + username)
+                .get(endpoint + param)
                 .then()
                 .spec(response);
     }

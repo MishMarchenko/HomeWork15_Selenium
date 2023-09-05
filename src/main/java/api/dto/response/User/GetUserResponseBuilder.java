@@ -1,4 +1,4 @@
-package api.dto.response;
+package api.dto.response.User;
 
 import lombok.Builder;
 import lombok.Data;
@@ -9,8 +9,9 @@ import lombok.AllArgsConstructor;
 @Builder
 @AllArgsConstructor
 @NoArgsConstructor
-public class CreateUserResponseBuilder {
-    Integer code;
-    String type;
-    String message;
+public class GetUserResponseBuilder {
+    Long id;
+    String username;
+    String lastname;
+    Integer userStatus;
 }

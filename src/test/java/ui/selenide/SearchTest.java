@@ -9,7 +9,7 @@ import static com.codeborne.selenide.WebDriverRunner.getWebDriver;
 import static org.assertj.core.api.AssertionsForClassTypes.assertThat;
 
 public class SearchTest {
-    @Test
+    @Test(groups = {"Selenide"})
     void shouldBeVisibleArticleUbisoft(){
         open("https://ru.wikipedia.org/");
         getWebDriver().manage().window().maximize();
