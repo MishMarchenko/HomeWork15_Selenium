@@ -10,7 +10,7 @@ import java.util.Properties;
 
 public class Utils {
 
-    public static Object getProperty(String nameProperty){
+    public static Object getApiProperty(String nameProperty){
         Properties properties = new Properties();
         try(InputStream is = Files.newInputStream(Paths.get("src/test/api.properties"))){
             properties.load(is);
