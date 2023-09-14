@@ -1,6 +1,6 @@
 package api.config;
 
-import static api.utils.Utils.getProperty;
+import static api.utils.Utils.getApiProperty;
 import static api.utils.Utils.toJson;
 
 import api.dto.request.UserBookBuilders.UserRequestBuilder;
@@ -11,9 +11,9 @@ import io.restassured.specification.RequestSpecification;
 public class BaseRequestSpecification {
     private final String APPLICATION_JSON = "application/json";
     private final String CONTENT_TYPE = "Content-type";
-    private final String url =(String) getProperty("url");
-    private final String url_account = (String) getProperty("url_account");
-    private final String url_book = (String) getProperty("url_book");
+    private final String url =(String) getApiProperty("url");
+    private final String url_account = (String) getApiProperty("url_account");
+    private final String url_book = (String) getApiProperty("url_book");
     private final Request request = new Request();
     private final BaseResponseSpecification response = new BaseResponseSpecification();
 
